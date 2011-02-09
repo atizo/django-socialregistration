@@ -1,5 +1,7 @@
 *.pyc
 .DS_Store
+.project
+.pydevproject
 
 django_socialregistration.egg-info
 build/
