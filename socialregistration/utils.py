@@ -207,8 +207,7 @@ class OAuthClient(object):
         if self.request_token is None:
             if self.callback_url is not None:
                 params = urllib.urlencode([
-                    ('oauth_callback', 'http://%s%s' % (Site.objects.get_current(),
-                        reverse(self.callback_url))),
+                    ('oauth_callback', self.callback_url),
                 ])
                 request_token_url = '%s?%s' % (self.request_token_url, params)
             else:
