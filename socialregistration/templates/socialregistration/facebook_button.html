@@ -8,5 +8,5 @@
 {% if next %}
     <input type="hidden" name="next" value="{{ next }}" />
 {% endif %}
-<input type="button" class="socreg fb" onclick="facebookConnect(this.form);return false;" />
+<input type="button" class="socreg fb {{ request.LANGUAGE_CODE }}" onclick="facebookConnect(this.form);return false;" />
 </form>
