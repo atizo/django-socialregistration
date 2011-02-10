@@ -1,5 +1,4 @@
 from django import template
-from django.conf import settings
 
 register = template.Library()
 
@@ -12,4 +11,4 @@ def twitter_button(context):
         next = context['next']
     else:
         next = None
-    return dict(next=next, logged_in=logged_in, request=context['request'], media_url=settings.MEDIA_URL)
+    return dict(next=next, logged_in=logged_in, request=context['request'])
